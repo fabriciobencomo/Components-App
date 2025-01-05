@@ -22,7 +22,7 @@ const index = () => {
       }
       <View className='my-3' />
       {
-        menuRoutes.map((route, index) => (
+        uiMenuRoutes.map((route, index) => (
           <MenuItem 
                     key={route.title}
                     title={route.title} 
@@ -32,10 +32,10 @@ const index = () => {
                     isLast={index === animationMenuRoutes.length - 1}
           />
         ))
-      }
+      }     
       <View className='my-3' />
       {
-        uiMenuRoutes.map((route, index) => (
+        menuRoutes.map((route, index) => (
           <MenuItem 
                     key={route.title}
                     title={route.title} 
