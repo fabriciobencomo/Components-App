@@ -17,7 +17,7 @@ const ThemedText = ({className, type, ...rest}: Props) => {
           type === 'semi-bold' ? 'font-semibold' : undefined,
           type === 'link' ? 'font-normal underline' : undefined,
           'text-light-text dark:text-dark-text',
-        ].join(' ')}
+        , className].join(' ') }
       {...rest} />
   )
 }
