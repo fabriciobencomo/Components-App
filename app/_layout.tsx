@@ -13,6 +13,7 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import ThemedView from '@/presentation/shared/ThemedView';
 import ThemedText from '@/presentation/shared/ThemedText';
 import { allRoutes } from '@/constants/Routes';
+import { ThemeChangerProvider } from '@/presentation/components/context/ThemeChangerContext';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -37,7 +38,7 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ backgroundColor: backgroundColor, flex: 1}}>
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <ThemeChangerProvider>
         <Stack
           screenOptions={{
             headerShadowVisible: false,
@@ -59,7 +60,7 @@ export default function RootLayout() {
             ))
           }
         </Stack>
-      </ThemeProvider>
+      </ThemeChangerProvider>
     </GestureHandlerRootView>
   );
 }
