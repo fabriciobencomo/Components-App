@@ -53,7 +53,8 @@ export default function RootLayout() {
           {
             allRoutes.map(route => (
               <Stack.Screen key={route.name} name={route.name} options={{
-                title: route.title
+                title: route.title,
+                headerShown: route.title === 'Slides' ? false : true
               }}/>
             ))
           }

@@ -1,5 +1,5 @@
 import { useThemeColor } from '@/hooks/useThemeColor';
-import FadeInImage from '@/presentation/components/images/fadeInImage';
+import FadeInImage from '@/presentation/components/images/FadeInImage';
 import ThemedText from '@/presentation/shared/ThemedText';
 import ThemedView from '@/presentation/shared/ThemedView';
 import { useState } from 'react';
